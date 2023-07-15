@@ -30,4 +30,8 @@ public class ClientController {
 
     @DeleteMapping("/{id}")
     public Mono<Void> deleteC(@PathVariable Long id) { return clientService.deleteById(id); }
+
+    @GetMapping("/type/{typeId}")
+    public Flux<Clients> findByTypeId(@PathVariable Long typeId) {return clientService.findByClientTypeId(typeId); }
+
 }

@@ -10,4 +10,6 @@ public interface ClientService {
     Mono<Clients> save(Clients client);
     Mono<Clients> update(Long id, Clients client);
     Mono<Void> deleteById (Long id);
+
+    Flux<Clients> findByClientTypeId(Long typeId);
 }
